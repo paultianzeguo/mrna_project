@@ -1,0 +1,38 @@
+import numpy as np
+import math
+import scipy.stats
+from matplotlib import pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import copy
+r=0.59
+d=[]
+angle=10/18   ##Change angle here
+R3rna=np.array([0,0,0])
+theta=np.random.uniform(0,2*math.pi)
+phi=np.random.uniform(0,math.pi)
+rna=np.array([0,phi,theta])
+[x,y,z]=[r*math.sin(theta)*math.cos(phi),r*math.sin(theta)*math.sin(phi),r*math.cos(theta)]
+R3rna=R3rna+np.array([x,y,z])
+x1=[]
+y1=[]
+z1=[]
+x1.append(R3rna[0])
+y1.append(R3rna[1])
+z1.append(R3rna[2])
+for i in range(100):
+   [a,b,c]=rna
+   c=math.pi/2-c
+   phi=np.random.uniform(b-math.pi*angle,b+math.pi*angle)
+   theta1=np.random.uniform(c-math.pi*angle,c+math.pi*angle)
+   theta=math.pi/2-theta1
+   rna=np.array([0,phi,theta])
+   [x,y,z]=[r*math.sin(theta)*math.cos(phi),r*math.sin(theta)*math.sin(phi),r*math.cos(theta)]
+   R3rna=R3rna+np.array([x,y,z])
+   x1.append(R3rna[0])
+   y1.append(R3rna[1])
+   z1.append(R3rna[2])
+   fig=plt.figure()
+   ax=plt.axes(projection='3d')
+   ax.scatter(x1,y1,z1)
+   ax.plot(x1,y1,z1)
+   plt.savefig("trajectory"+str(i)+".png")
