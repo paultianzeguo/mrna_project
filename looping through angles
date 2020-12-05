@@ -1,0 +1,41 @@
+import numpy as np
+import math
+import scipy.stats
+from matplotlib import pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+def rna(angle):
+    r=0.59
+    d=[]    
+    for i in range(100):
+        R3rna=np.array([0,0,0])
+        theta=np.random.uniform(0,math.pi)
+        phi=np.random.uniform(0,2*math.pi)
+        rna=np.array([0,phi,theta])
+        [x,y,z]=[r*math.sin(theta)*math.cos(phi),r*math.sin(theta)*math.sin(phi),r*math.cos(theta)]
+        R3rna=R3rna+np.array([x,y,z])
+        for i in range(18412):         ##For 5486 or other nts, change the number in here
+            [a,b,c]=rna
+            c=math.pi/2-c
+            phi=np.random.uniform(b-math.pi*angle,b+math.pi*angle)
+            theta1=np.random.uniform(c-math.pi*angle,c+math.pi*angle)
+            theta=math.pi/2-theta1
+            rna=np.array([0,phi,theta])
+            [x,y,z]=[r*math.sin(theta)*math.cos(phi),r*math.sin(theta)*math.sin(phi),r*math.cos(theta)]
+            R3rna=R3rna+np.array([x,y,z])
+        distance=math.sqrt(R3rna[0]**2+R3rna[1]**2+R3rna[2]**2)
+        d.append(distance)
+    d=np.array(d)
+    xmin=np.min(d)
+    xmax=np.max(d)
+    mean,std=scipy.stats.norm.fit(d)
+    median=np.median(d)
+    plt.hist(d, bins=25, density=True, alpha=0.6, color='g')
+    x = np.linspace(xmin, xmax, 100)
+    y = scipy.stats.norm.pdf(x, mean, std)
+    plt.plot(x, y, 'k', linewidth=2)
+    title = "Fit results: mean = %.2f, median=%.2f, std = %.2f" % (mean,median, std)
+    plt.title(title)
+    plt.show()
+    
+for i in range(18):
+    rna((i+1)/18)
