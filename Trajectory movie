@@ -18,9 +18,9 @@ phi=np.random.uniform(0,math.pi)
 rna=np.array([0,phi,theta])
 [x,y,z]=[r*math.sin(theta)*math.cos(phi),r*math.sin(theta)*math.sin(phi),r*math.cos(theta)]
 R3rna=R3rna+np.array([x,y,z])
-x1=[]
-y1=[]
-z1=[]
+x1=[0]
+y1=[0]
+z1=[0]
 x1.append(R3rna[0])
 y1.append(R3rna[1])
 z1.append(R3rna[2])
