@@ -13,8 +13,8 @@ r=0.59
 d=[]    
 angle=10/18
 R3rna=np.array([0,0,0])
-theta=np.random.uniform(0,2*math.pi)
-phi=np.random.uniform(0,2*math.pi)
+theta=np.random.uniform(-1/2*math.pi,1/2*math.pi)
+phi=np.random.uniform(0,math.pi)
 rna=np.array([0,phi,theta])
 [x,y,z]=[r*math.sin(theta)*math.cos(phi),r*math.sin(theta)*math.sin(phi),r*math.cos(theta)]
 R3rna=R3rna+np.array([x,y,z])
@@ -70,8 +70,8 @@ def ribosome(number):
                     z1[num+i]=z1[num+i]-c1
 ribosome(25)
 fig = plt.figure()
-X1=np.linspace(min(x1),max(x1),100)
-Y1=np.linspace(min(y1),max(y1),100)
+X1=np.linspace(-100,100,100)
+Y1=np.linspace(-50,50,100)
 X,Y = np.meshgrid(X1,Y1)
 Z=0*X+0*Y+0
 ax = fig.gca(projection='3d')
