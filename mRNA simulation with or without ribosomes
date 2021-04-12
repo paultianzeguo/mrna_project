@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 r=0.59
 d=[]    
-angle=11/18       ## Angle change here
+angle=14/18       ## Angle change here
 for i in range(100):
     R3rna=np.array([0,0,0])
     theta=np.random.uniform(0,2*math.pi)
