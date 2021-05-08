@@ -3,15 +3,22 @@
 
 # In[ ]:
 
+## Importing packages
 import numpy as np
 import math
 import scipy.stats
 from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+
+## Setting up parameters
 r=0.59
 d=[]    
 angle=14/18       ## Angle change here
-for i in range(100):
+
+## Input the sample number below:
+for i in range(1000):
+    
+    ## Set up the first point
     R3rna=np.array([0,0,0])
     theta=np.random.uniform(0,2*math.pi)
     phi=np.random.uniform(0,math.pi)
@@ -24,7 +31,10 @@ for i in range(100):
     x1.append(R3rna[0])
     y1.append(R3rna[1])
     z1.append(R3rna[2])
-    for i in range(6636-30*0):    ## Apply changes in nts number, Apply ribosome number change here as well!     
+    
+    ## Set up the loop function that creates new nucleotides to the end
+    ## Input the length data below, equation = (length of RNA - 30 * ribosome number)
+    for i in range(0-30*0):      
         [a,b,c]=rna
         c=math.pi/2-c
         phi=np.random.uniform(b-math.pi*angle,b+math.pi*angle)
@@ -55,8 +65,15 @@ for i in range(100):
                var=var+1
             else:
                 var=var
-    ribosome(0)    ## Change ribosome number 
+                
+    ## Adding ribosomes, analyzing collected data
+    ## Input the number of ribosomes below                  
+    ribosome(0) 
+    
     distance=math.sqrt(x1[-1]**2+y1[-1]**2+z1[-1]**2)
+    ## For 2D analysis, comment out the line above (put a # in front) and uncomment the line below (take the # off)
+    #distance=math.sqrt(x1[-1]**2+y1[-1]**2+z1[-1]**2)*math.sqrt(2)/math.sqrt(3)
+
     d.append(distance)
 d=np.array(d)
 xmin=np.min(d)
@@ -70,3 +87,7 @@ plt.plot(x, y, 'k', linewidth=2)
 title = "Fit results: mean = %.2f, median=%.2f, std = %.2f" % (mean,median, std)
 plt.title(title)
 plt.show()
+
+## Uncomment (delete the #) the line below to save data, inside '' please type the name of the file
+
+#d.tofile('xxx.csv',sep=',',format='%10.5f')
