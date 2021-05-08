@@ -11,16 +11,16 @@ from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import copy
 
-## Setting up parameters and pre-setup arrays
+## Setting up parameters
 r=0.59
 d=[]
 angle=14/18   ## Apply angle change here
 R3rna=np.array([0,0,0])
+
+## Set up the first point
 theta=np.random.uniform(0,2*math.pi)
 phi=np.random.uniform(0,math.pi)
 rna=np.array([0,phi,theta])
-
-## Set up the first point
 [x,y,z]=[r*math.sin(theta)*math.cos(phi),r*math.sin(theta)*math.sin(phi),r*math.cos(theta)]
 R3rna=R3rna+np.array([x,y,z])
 x1=[0]
