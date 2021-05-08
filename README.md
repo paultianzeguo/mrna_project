@@ -11,9 +11,6 @@ In Simulation of RNA on a surface,  the code titled "mRNA on a surface" and "Vis
 Trajectory movie is a code that simulations 100 nucleotides long RNA strand and outputs for plot when each single strand is added, this can form a trajectory movie by stacking the images with the aid of image analyzer tool like FiJi.
 ## Instructions
 Generally, to use the code, it just needs three inputs: sample number, the RNA length in numbers of nucleotide, and the number of ribosomes.
-
 The first place ask for input is at the first looping function, which is indicated in each code, to input sample number
-
 The second place ask for input is at the second looping function, which is indicated in each code, to input RNA length, the input equation is Length - 30 * (ribosome number)
-
 The third place ask for input is at the ribosome() function, which is indicated in each code, to input the number of ribosomes
