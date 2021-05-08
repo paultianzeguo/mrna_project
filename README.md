@@ -12,7 +12,7 @@ Trajectory movie is a code that simulations 100 nucleotides long RNA strand and 
 ## Instructions
 Generally, to use the code, it just needs three inputs: sample number, the RNA length in numbers of nucleotide, and the number of ribosomes.
 
-The first place ask for input is at the first looping function, which is indicated in each code, to input sample number
+The first place ask for input is at the first looping function, which is indicated in each code, to input sample number. The sample number is recommended to be 1000, to account for faster runtime, 500 is preferred instead. For longer RNA strands, 200 is preferred to produce accurate results.
 
 The second place ask for input is at the second looping function, which is indicated in each code, to input RNA length, the input equation is Length - 30 * (ribosome number)
 
