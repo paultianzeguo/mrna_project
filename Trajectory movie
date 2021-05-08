@@ -34,8 +34,8 @@ ax.scatter(x1,y1,z1)
 ax.plot(x1,y1,z1)
 plt.savefig("trajectory"+str(1)+".png")
 
-## set up the loop function that creates new nucleotides to the end
-## below input the sample number in () after range
+## Set up the loop function that creates new nucleotides to the end
+## At Below input the length in ()
 for i in range(100-2):
    [a,b,c]=rna
    c=math.pi/2-c
