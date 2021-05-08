@@ -3,7 +3,7 @@
 
 # In[ ]:
 
-## importing packages
+## Importing packages
 import numpy as np
 import math
 import scipy.stats
@@ -30,8 +30,8 @@ x1.append(R3rna[0])
 y1.append(R3rna[1])
 z1.append(R3rna[2])
 
-## set up the loop function that creates new nucleotides to the end
-## input the length data below, equation = (length of RNA - 30 * ribosome number)
+## Set up the loop function that creates new nucleotides to the end
+## Input the length data below, equation = (length of RNA - 30 * ribosome number)
 for i in range(0-30*0):
     [a,b,c]=rna
     c=math.pi/2-c
@@ -64,8 +64,8 @@ def ribosome(number):
         else:
             var=var
             
-## analyzing collected data
-## input the number of ribosomes below
+## Adding ribosomes, analyzing collected data
+## Input the number of ribosomes below:
 ribosome(0) 
 fig=plt.figure()
 ax=plt.axes(projection='3d')
