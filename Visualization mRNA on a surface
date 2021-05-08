@@ -77,7 +77,7 @@ def ribosome(number):
                     y1[num+i]=y1[num+i]-b1
                     z1[num+i]=z1[num+i]-c1
 
-## analyzing collected data
+## Adding ribosomes, analyzing collected data
 ## input the number of ribosomes below
 ribosome(0)
 fig=plt.figure()
