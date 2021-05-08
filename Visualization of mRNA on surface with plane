@@ -3,15 +3,20 @@
 
 # In[ ]:
 
+## importing packages
 import numpy as np
 import math
 import scipy.stats
 from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import copy
+
+## Setting up parameters
 r=0.59
 d=[]    
 angle=14/18
+
+## Set up the first point
 R3rna=np.array([0,0,0])
 theta=np.random.uniform(-1/2*math.pi,1/2*math.pi)
 phi=np.random.uniform(0,math.pi)
@@ -25,7 +30,10 @@ x1.append(R3rna[0])
 y1.append(R3rna[1])
 z1.append(R3rna[2])
 var2=0
-while var2 <(1500-30*25):
+
+## set up the loop function that creates new nucleotides to the end
+## input the length data below, equation = (length of RNA - 30 * ribosome number)
+while var2 <(0-30*0):
     [a,b,c]=rna
     c=math.pi/2-c
     phi=np.random.uniform(b-math.pi*angle,b+math.pi*angle)
@@ -68,7 +76,10 @@ def ribosome(number):
                     x1[num+i]=x1[num+i]-a1
                     y1[num+i]=y1[num+i]-b1
                     z1[num+i]=z1[num+i]-c1
-ribosome(25)
+
+## analyzing collected data
+## input the number of ribosomes below                    
+ribosome(0)
 fig = plt.figure()
 X1=np.linspace(-100,100,100)
 Y1=np.linspace(-50,50,100)
