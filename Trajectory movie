@@ -3,19 +3,24 @@
 
 # In[ ]:
 
+## Import Packages
 import numpy as np
 import math
 import scipy.stats
 from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import copy
+
+## Setting up parameters and pre-setup arrays
 r=0.59
 d=[]
-angle=1/18   ##Change angle here
+angle=14/18   ## Apply angle change here
 R3rna=np.array([0,0,0])
 theta=np.random.uniform(0,2*math.pi)
 phi=np.random.uniform(0,math.pi)
 rna=np.array([0,phi,theta])
+
+## Set up the first point
 [x,y,z]=[r*math.sin(theta)*math.cos(phi),r*math.sin(theta)*math.sin(phi),r*math.cos(theta)]
 R3rna=R3rna+np.array([x,y,z])
 x1=[0]
@@ -28,6 +33,9 @@ ax=plt.axes(projection='3d')
 ax.scatter(x1,y1,z1)
 ax.plot(x1,y1,z1)
 plt.savefig("trajectory"+str(1)+".png")
+
+## set up the loop function that creates new nucleotides to the end
+## below input the sample number in () after range
 for i in range(100-2):
    [a,b,c]=rna
    c=math.pi/2-c
