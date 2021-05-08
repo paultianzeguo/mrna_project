@@ -1,6 +1,6 @@
 ## Introduction
 TRIP (Three-dimensional RNA Illustration Program) is a set of separate codes to model the 3D RNA folding shape based on polymer theory.
-The set of codes is separated into seven different files, which categorized into four main parts: 
+The set of codes is separated into six different files, which categorized into four main parts: 
 1. Simulation of RNA 
 2. Simulation of RNA on a surface
 3. Trajectory movie
