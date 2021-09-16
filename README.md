@@ -38,7 +38,7 @@ The second place ask for input is at the second looping function, for example
 
 ![image](https://user-images.githubusercontent.com/75511362/133612501-029a9fb3-c56f-4b91-8876-b7f45b67d6b2.png)
 
-which is indicated in each code, to input RNA length in the parentheses, the input equation is Length - 30 * (ribosome number), it can either take the equation (e.g. 10000-30*50), or the result (e.g. 8500)
+which is indicated in each code, to input RNA length in the parentheses, the input equation is Length - 30 * (ribosome number), it can either take the equation (e.g. 10000-30*50), or the result (e.g. 8500).
 
 The third place ask for input is at the ribosome() function, 
 
