@@ -20,7 +20,7 @@ The set of codes is separated into six different files, which categorized into t
 
   -Trajectory movie
 
-The first two categories contains a script that outputs a distribution polt, and a script outputs corresponding visualization in 3D.
+The first two categories contains a script that outputs a distribution plot, and a script outputs corresponding visualization in 3D.
 In Simulation of RNA, the script titled "simulation of mrna with or without ribosomes" is a simulation code that output the 5'-3' distribution from the samples of simulation, and code titled "Visualization mrna with or without ribosomes" is a simulation code that generates one strand of input length of RNA onto 3D Cartesian coordinates.
 
 In Simulation of RNA on a surface,  the script titled "mRNA on a surface" and "Visualization mRNA on a surface" works the same as discussed above, except it simulates for a RNA that localized onto a surface. "Visualization of mRNA on surface with plane" is the visualization of mRNA on a surface displayed along with its reference plane z=0.
