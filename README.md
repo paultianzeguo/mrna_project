@@ -24,12 +24,17 @@ The first place ask for input is at the first looping function, for example
 
 ![image](https://user-images.githubusercontent.com/75511362/133612275-fa74cd18-cd7a-475c-8e67-eba2f62f9dce.png)
 
-which is indicated in each code, to input sample number. The sample number is set default to be 1000. To account for faster runtime or higher accuracy, the sample number can be manually adjusted.
+which is indicated in each code, to input sample number in the parentheses. The sample number is set default to be 1000. To account for faster runtime or higher accuracy, the sample number can be manually adjusted.
 
 The second place ask for input is at the second looping function, for example
 
 ![image](https://user-images.githubusercontent.com/75511362/133612501-029a9fb3-c56f-4b91-8876-b7f45b67d6b2.png)
 
-which is indicated in each code, to input RNA length, the input equation is Length - 30 * (ribosome number), it can either take the equation (e.g. 10000-30*50), or the result (e.g. 8500)
+which is indicated in each code, to input RNA length in the parentheses, the input equation is Length - 30 * (ribosome number), it can either take the equation (e.g. 10000-30*50), or the result (e.g. 8500)
 
-The third place ask for input is at the ribosome() function, which is indicated in each code, to input the number of ribosomes
+The third place ask for input is at the ribosome() function, 
+
+![image](https://user-images.githubusercontent.com/75511362/133612850-264ec8c0-8736-45ca-99ef-e2cde6a77691.png)
+
+
+which is indicated in each code, to input the number of ribosomes in the parentheses.
