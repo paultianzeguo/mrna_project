@@ -3,13 +3,21 @@ TRIP (Three-dimensional RNA Illustration Program) is a set of separate Python sc
 The set of codes is separated into six different files, which categorized into three main parts: 
 
 1. Simulation of RNA 
+
 -mRNA simulation with or without ribosomes
+
 -Visualization mrna with or without ribosomes
+
 2. Simulation of RNA on a surface
+
 -mRNA on a surface
+
 -Visualization mRNA on a surface
+
 -Visualization of mRNA on surface with plane
+
 3. Trajectory movie
+
 -Trajectory movie
 
 The first two categories contains a script that outputs a distribution polt, and a script outputs corresponding visualization in 3D.
