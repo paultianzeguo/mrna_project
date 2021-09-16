@@ -26,7 +26,7 @@ In Simulation of RNA on a surface,  the script titled "mRNA on a surface" and "V
 Trajectory movie is a code that simulations 100 nucleotides long RNA strand and outputs for plot when each single strand is added, this can form a trajectory movie by stacking the images with the aid of image analyzer tool FiJi.
 
 ## Instructions
-Generally, to use the code, it just needs three inputs: sample number, the RNA length in numbers of nucleotide, and the number of ribosomes.
+Generally, to use the scripts, it shall be lauched and run in a python environment. It just needs three inputs: sample number, the RNA length in numbers of nucleotide, and the number of ribosomes.
 
 The first place ask for input is at the first looping function, for example
 
