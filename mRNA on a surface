@@ -95,7 +95,7 @@ y = scipy.stats.norm.pdf(x, mean, std)
 plt.plot(x, y, 'k', linewidth=2)
 title = "Fit results: mean = %.2f, median=%.2f, std = %.2f" % (mean,median, std)
 plt.title(title)
-
+plt.show()
 ## Uncomment (delete the #) the line below to save data, inside '' please type the name of the file
 
 #d.tofile('xxx.csv',sep=',',format='%10.5f')
